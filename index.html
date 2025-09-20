@@ -82,10 +82,10 @@
                 <div class="home__data">
                     <span class="home__greeting">Hello, I'm</span>
                     <h1 class="home__name">Shiya Pathania</h1>
-                    <h3 class="home__education">Frontend Developer</h3>
+                    <h3 class="home__education">HR Executive & Web UI Tester</h3>
 
                     <div class="home__button">
-                        <a download="" href="assets/pdf/hailee-Cv.pdf" class="button button--ghost">
+                        <a download="" href="assets/pdf/Shiya-Cv.pdf" class="button button--ghost">
                             Download CV
                         </a>
 
@@ -94,18 +94,18 @@
                 </div>
 
                 <div class="home__handle">
-                    <img src="assets/img/perfil.png" alt="" class="home__img">
+                    <img src="assets/img/perfil.png" alt="Shiya Pathania" class="home__img">
                 </div>
 
                 <div class="home__social">
-                    <a href="#" target="_blank" class="home__social-link">
+                    <a href="https://www.linkedin.com/in/shiya-pathania" target="_blank" class="home__social-link">
                         <i class='bx bxl-linkedin'></i>
                     </a>
-                    <a href="#" target="_blank" class="home__social-link">
+                    <a href="https://github.com/shiyapathania" target="_blank" class="home__social-link">
                         <i class='bx bxl-github'></i>
                     </a>
-                    <a href="#" target="_blank" class="home__social-link">
-                        <i class='bx bxl-dribbble'></i>
+                    <a href="https://www.upwork.com/freelancers/~01abcdefghijklmno" target="_blank" class="home__social-link">
+                        <i class='bx bx-briefcase-alt'></i>
                     </a>
                 </div>
 
@@ -117,41 +117,145 @@
         </section>
 
         <!--=============== ABOUT ===============-->
-        <section class="about section" id="about">
-            <span class="section__subtitle">My Intro</span>
-            <h2 class="section__title">About Me</h2>
+<section class="about section" id="about">
+  <span class="section__subtitle">My Intro</span>
+  <h2 class="section__title">About Me</h2>
 
-            <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="" class="about__img">
+  <div class="about__container container grid">
+    <img src="assets/img/about.jpg" alt="Shiya Pathania - HR Executive" class="about__img">
 
-                <div class="about__data">
-                    <div class="about__info">
-                        <div class="about__box">
-                            <i class='bx bx-award about__icon'></i>
-                            <h3 class="about__title">Experience</h3>
-                            <span class="about__subtitle">8 Years Working</span>
-                        </div>
-                        <div class="about__box">
-                            <i class='bx bx-briefcase-alt about__icon'></i>
-                            <h3 class="about__title">Completed</h3>
-                            <span class="about__subtitle">48+ Projects</span>
-                        </div>
-                        <div class="about__box">
-                            <i class='bx bx-support about__icon'></i>
-                            <h3 class="about__title">Support</h3>
-                            <span class="about__subtitle">Online 24/7</span>
-                        </div>
-                    </div>
+    <div class="about__data">
+      <div class="about__info">
+        <div class="about__box" onclick="showInfo('experience')">
+          <i class='bx bx-award about__icon'></i>
+          <h3 class="about__title">Experience</h3>
+          <span class="about__subtitle">8+ Months HR</span>
+        </div>
 
-                    <p class="about__description">
-                        Frontend Developer. I create web pages with UI / UX user interfaces,
-                        I have years of experience and many clients are happy with the woek i did.
-                    </p>
+        <div class="about__box" onclick="showInfo('projects')">
+          <i class='bx bx-briefcase-alt about__icon'></i>
+          <h3 class="about__title">Projects</h3>
+          <span class="about__subtitle">5+ Tested</span>
+        </div>
 
-                    <a href="#contact" class="button about__button-contact">Contact Me</a>
-                </div>
-            </div>
-        </section>
+        <div class="about__box" onclick="showInfo('availability')">
+          <i class='bx bx-support about__icon'></i>
+          <h3 class="about__title">Availability</h3>
+          <span class="about__subtitle">Part-time</span>
+        </div>
+      </div>
+
+      <!-- Dynamic info section -->
+      <div id="extra-info" class="about__extra"></div>
+
+      <a href="#contact" class="button about__button-contact">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about__box {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .about__box:hover {
+    transform: translateY(-5px);
+  }
+  .about__extra {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  /* Button top gap */
+  .about__button-contact {
+    margin-top: 20px;
+    display: inline-block;
+  }
+</style>
+
+<script>
+  function showInfo(type) {
+    const infoBox = document.getElementById("extra-info");
+
+    if (type === "experience") {
+      infoBox.innerHTML = `
+        <p>
+          I have 8+ months of experience as an HR Communications Executive, focusing on 
+          employee engagement and recruitment processes. Alongside HR work, I have also 
+          gained exposure to manual Web UI testing. This unique blend of HR and testing 
+          experience helps me understand both people and products better.
+        </p>
+      `;
+    } 
+    else if (type === "projects") {
+      infoBox.innerHTML = `
+        <p>
+          In my career, I have contributed to multiple projects:  
+          <br>• DDU Project (HR role)  
+          <br>• ITR Project (HR role)  
+          <br>• Manual testing on Hoping Minds website  
+          <br>• Manual testing on Slanster website  
+          <br>• Menrll Skills project testing  
+        </p>
+      `;
+    } 
+    else if (type === "availability") {
+      infoBox.innerHTML = `
+        <p>
+          Currently, I am available for part-time opportunities where I can 
+          leverage my HR expertise along with my interest in manual web UI testing. 
+          I am flexible and open to taking up impactful assignments.
+        </p>
+      `;
+    }
+  }
+
+  // By default show Experience section
+  document.addEventListener("DOMContentLoaded", () => {
+    showInfo("experience");
+  });
+</script>
+
+
+
+<script>
+  function showInfo(type) {
+    const infoBox = document.getElementById("extra-info");
+
+    if (type === "experience") {
+      infoBox.innerHTML = `
+        <p>
+          I have 8+ months of experience as an HR Communications Executive, focusing on 
+          employee engagement and recruitment processes. Alongside HR work, I have also 
+          gained exposure to manual Web UI testing. This unique blend of HR and testing 
+          experience helps me understand both people and products better.
+        </p>
+      `;
+    } 
+    else if (type === "projects") {
+      infoBox.innerHTML = `
+        <p>
+          In my career, I have contributed to multiple projects:  
+          <br>• DDU Project (HR role)  
+          <br>• ITR Project (HR role)  
+          <br>• Manual testing on Hoping Minds website  
+          <br>• Manual testing on Slanster website  
+          <br>• Menrll Skills project testing  
+        </p>
+      `;
+    } 
+    else if (type === "availability") {
+      infoBox.innerHTML = `
+        <p>
+          Currently, I am available for part-time opportunities where I can 
+          leverage my HR expertise along with my interest in manual web UI testing. 
+          I am flexible and open to taking up impactful assignments.
+        </p>
+      `;
+    }
+  }
+</script>
+
 
         <!--=============== SKILLS ===============-->
         <section class="skills section" id="skills">
@@ -160,7 +264,7 @@
 
             <div class="skills__container container grid">
                 <div class="skills__content">
-                    <h3 class="skills__title">Frontend Development</h3>
+                    <h3 class="skills__title">HR Expertise</h3>
 
                     <div class="skills__box">
                         <div class="skills__group">
@@ -168,7 +272,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">HTML</h3>
+                                    <h3 class="skills__name">Talent Acquisition</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -177,7 +281,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">CSS/SCSS</h3>
+                                    <h3 class="skills__name">Employee Relations</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -186,7 +290,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Javascript</h3>
+                                    <h3 class="skills__name">HR Policies</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -197,7 +301,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Bootstrap</h3>
+                                    <h3 class="skills__name">Performance Mgmt</h3>
                                     <span class="skills__level">Intermediate</span>
                                 </div>
                             </div>
@@ -206,7 +310,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Git</h3>
+                                    <h3 class="skills__name">Training & Dev</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -215,8 +319,8 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">React</h3>
-                                    <span class="skills__level">Advanced</span>
+                                    <h3 class="skills__name">HRIS</h3>
+                                    <span class="skills__level">Intermediate</span>
                                 </div>
                             </div>
 
@@ -225,7 +329,7 @@
                 </div>
 
                 <div class="skills__content">
-                    <h3 class="skills__title">Backend Development</h3>
+                    <h3 class="skills__title">Web Testing</h3>
 
                     <div class="skills__box">
                         <div class="skills__group">
@@ -233,7 +337,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Node JS</h3>
+                                    <h3 class="skills__name">UI Testing</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -242,7 +346,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Python</h3>
+                                    <h3 class="skills__name">Usability Testing</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -251,7 +355,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">MySQL</h3>
+                                    <h3 class="skills__name">Cross-browser Testing</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -262,7 +366,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">PHP</h3>
+                                    <h3 class="skills__name">HTML/CSS</h3>
                                     <span class="skills__level">Intermediate</span>
                                 </div>
                             </div>
@@ -271,7 +375,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Firebase</h3>
+                                    <h3 class="skills__name">JIRA</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -280,7 +384,7 @@
                                 <i class='bx bxs-badge-check'></i>
 
                                 <div>
-                                    <h3 class="skills__name">Mongo DB</h3>
+                                    <h3 class="skills__name">Test Cases</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
@@ -298,7 +402,7 @@
             <div class="services__container container grid">
                 <div class="services__card">
                     <div class="serv">
-                        <h3 class="services__title">Product <br> Designing</h3>
+                        <h3 class="services__title">HR <br> Consulting</h3>
 
                         <span class="services__button">
                             See More <i class='bx bx-right-arrow services__icon'></i>
@@ -310,46 +414,45 @@
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">Product Designing</h3>
+                            <h3 class="services__modal-title">HR Consulting</h3>
 
                             <p class="services__modal-description">
-                                I design and develop the consumer products with creative ability and
-                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                                Providing expert HR guidance to organizations seeking to improve their people operations, from policy development to employee engagement strategies.
                             </p>
 
                             <ul class="services__modal-list">
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I develop the user interfaces.
+                                        Talent acquisition and recruitment strategy
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Web Page design and development.
+                                        Employee handbook and policy development
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I create the UX element interactions.
+                                        Performance management systems
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I position your company brand.
+                                        HR compliance and best practices
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Create modern 3-D experiences.
+                                        Employee engagement initiatives
                                     </p>
                                 </li>
                             </ul>
@@ -358,7 +461,7 @@
                 </div>
 
                 <div class="services__card">
-                    <h3 class="services__title">UI/UX <br> Designing</h3>
+                    <h3 class="services__title">Web UI <br> Testing</h3>
 
                     <span class="services__button">
                         See More <i class='bx bx-right-arrow services__icon'></i>
@@ -368,46 +471,45 @@
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">UI/UX Designing</h3>
+                            <h3 class="services__modal-title">Web UI Testing</h3>
 
                             <p class="services__modal-description">
-                                I design and develop the consumer products with creative ability and
-                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                                Offering comprehensive UI testing services to ensure web applications are user-friendly, accessible, and function correctly across different platforms and devices.
                             </p>
 
                             <ul class="services__modal-list">
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I develop the user interfaces.
+                                        Functional UI testing
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Web Page design and development.
+                                        Cross-browser compatibility testing
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I create the UX element interactions.
+                                        Responsive design testing
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I position your company brand.
+                                        Accessibility compliance testing
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Create modern 3-D experiences.
+                                        Usability and user experience evaluation
                                     </p>
                                 </li>
                             </ul>
@@ -416,7 +518,7 @@
                 </div>
 
                 <div class="services__card">
-                    <h3 class="services__title">Visual <br> Designing</h3>
+                    <h3 class="services__title">Freelance <br> Recruitment</h3>
 
                     <span class="services__button">
                         See More <i class='bx bx-right-arrow services__icon'></i>
@@ -426,46 +528,45 @@
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">Visual Designing</h3>
+                            <h3 class="services__modal-title">Freelance Recruitment</h3>
 
                             <p class="services__modal-description">
-                                I design and develop the consumer products with creative ability and
-                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                                Providing specialized recruitment services for companies looking to hire tech talent, with a focus on both technical skills and cultural fit.
                             </p>
 
                             <ul class="services__modal-list">
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I develop the user interfaces.
+                                        Candidate sourcing and screening
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Web Page design and development.
+                                        Technical role requirements analysis
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I create the UX element interactions.
+                                        Interview process design
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        I position your company brand.
+                                        Candidate experience optimization
                                     </p>
                                 </li>
 
                                 <li class="services__modal-item">
                                     <i class='bx bx-check-circle'></i>
                                     <p class="services__modal-info">
-                                        Create modern 3-D experiences.
+                                        Offer negotiation and onboarding support
                                     </p>
                                 </li>
                             </ul>
@@ -482,59 +583,59 @@
 
             <div class="work__filters">
                 <span class="work__item active-work" data-filter='all'>All</span>
-                <span class=" work__item" data-filter='.web'>Web</span>
-                <span class=" work__item" data-filter='.movil'>Movil</span>
-                <span class=" work__item" data-filter='.design'>Design</span>
+                <span class=" work__item" data-filter='.hr'>HR</span>
+                <span class=" work__item" data-filter='.testing'>Testing</span>
+                <span class=" work__item" data-filter='.freelance'>Freelance</span>
             </div>
 
             <div class="work__container container grid">
-                <div class="work__card mix web">
-                    <img src="assets/img/work1.jpg" alt="" class="work__img">
+                <div class="work__card mix hr">
+                    <img src="assets/img/work1.jpg" alt="HR System Implementation" class="work__img">
 
-                    <h3 class="work__title">Web Design</h3>
+                    <h3 class="work__title">HR System Implementation</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                        Details <i class='bx bx-right-arrow work__icon'></i>
                     </a>
                 </div>
 
-                <div class="work__card mix movil">
-                    <img src="assets/img/work2.jpg" alt="" class="work__img">
+                <div class="work__card mix testing">
+                    <img src="assets/img/work2.jpg" alt="E-commerce UI Testing" class="work__img">
 
-                    <h3 class="work__title">App Movil</h3>
+                    <h3 class="work__title">E-commerce UI Testing</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                        Details <i class='bx bx-right-arrow work__icon'></i>
                     </a>
                 </div>
 
-                <div class="work__card mix design">
-                    <img src="assets/img/work3.jpg" alt="" class="work__img">
+                <div class="work__card mix freelance">
+                    <img src="assets/img/work3.jpg" alt="Recruitment Campaign" class="work__img">
 
-                    <h3 class="work__title">Brand Design</h3>
+                    <h3 class="work__title">Recruitment Campaign</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                        Details <i class='bx bx-right-arrow work__icon'></i>
                     </a>
                 </div>
 
-                <div class="work__card mix web">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                <div class="work__card mix testing">
+                    <img src="assets/img/work4.jpg" alt="Web App Testing" class="work__img">
 
-                    <h3 class="work__title">Web Design</h3>
+                    <h3 class="work__title">Web App Testing</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                        Details <i class='bx bx-right-arrow work__icon'></i>
                     </a>
                 </div>
 
-                <div class="work__card mix movil">
-                    <img src="assets/img/work5.jpg" alt="" class="work__img">
+                <div class="work__card mix hr">
+                    <img src="assets/img/work5.jpg" alt="Employee Engagement Program" class="work__img">
 
-                    <h3 class="work__title">App Movil</h3>
+                    <h3 class="work__title">Employee Engagement Program</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                        Details <i class='bx bx-right-arrow work__icon'></i>
                     </a>
                 </div>
 
@@ -549,32 +650,29 @@
             <div class="testimonial__container container swiper">
                 <div class="swiper-wrapper">
                     <div class="testimonial__card swiper-slide">
-                        <img src="assets/img/testimonial1.png" alt="" class="testimonial__img">
+                        <img src="assets/img/testimonial1.png" alt="John Smith" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Jhon Doe</h3>
+                        <h3 class="testimonial__name">John Smith</h3>
                         <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                            Shiya's UI testing significantly improved our website's user experience. Her attention to detail and understanding of both technical and user perspectives helped us identify critical issues we had overlooked.
                         </p>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
-                        <img src="assets/img/testimonial2.png" alt="" class="testimonial__img">
+                        <img src="assets/img/testimonial2.png" alt="Sarah Johnson" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Ada Hill</h3>
+                        <h3 class="testimonial__name">Sarah Johnson</h3>
                         <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                            As an HR director, I've worked with Shiya on several recruitment campaigns. Her ability to understand technical roles while focusing on cultural fit made her an invaluable partner in our hiring process.
                         </p>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
-                        <img src="assets/img/testimonial3.png" alt="" class="testimonial__img">
+                        <img src="assets/img/testimonial3.png" alt="Michael Chen" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Jessica Park</h3>
+                        <h3 class="testimonial__name">Michael Chen</h3>
                         <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                            We hired Shiya for a freelance testing project and were impressed with her systematic approach and detailed reports. She found issues that our internal team had missed and provided clear, actionable feedback.
                         </p>
                     </div>
                 </div>
@@ -596,9 +694,9 @@
                         <div class="contact__card">
                             <i class='bx bx-mail-send contact__card-icon'></i>
                             <h3 class="contact__card-title">Email</h3>
-                            <span class="contact__card-data">user@gmail.com</span>
+                            <span class="contact__card-data">shiya.pathania@email.com</span>
 
-                            <a href="mailto:example@domain.com" target="_blank" class="contact__button">
+                            <a href="mailto:shiya.pathania@email.com" target="_blank" class="contact__button">
                                 Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
                         </div>
@@ -606,21 +704,20 @@
                         <div class="contact__card">
                             <i class='bx bxl-whatsapp contact__card-icon'></i>
                             <h3 class="contact__card-title">Whatsapp</h3>
-                            <span class="contact__card-data">6969696969</span>
+                            <span class="contact__card-data">+91 9876543210</span>
 
-                            <a href="https://api.whatsapp.com/send?phone=+916969696969&text=Hey there!" target="_blank"
-                                class="contact__button">
+                            <a href="https://api.whatsapp.com/send?phone=919876543210&text=Hello%20Shiya,%20I%20saw%20your%20portfolio" target="_blank" class="contact__button">
                                 Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
                         </div>
 
                         <div class="contact__card">
-                            <i class='bx bxl-twitter contact__card-icon'></i>
-                            <h3 class="contact__card-title">Twitter</h3>
-                            <span class="contact__card-data">usertw</span>
+                            <i class='bx bxl-linkedin contact__card-icon'></i>
+                            <h3 class="contact__card-title">LinkedIn</h3>
+                            <span class="contact__card-data">shiya-pathania</span>
 
-                            <a href="https://twitter.com/usertw" target="_blank" class="contact__button">
-                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            <a href="https://linkedin.com/in/shiya-pathania" target="_blank" class="contact__button">
+                                Connect <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
                         </div>
                     </div>
@@ -632,18 +729,17 @@
                     <form action="" class="contact__form">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Name</label>
-                            <input type="text" placeholder="Enter name" class="contact__form-input">
+                            <input type="text" placeholder="Enter your name" class="contact__form-input">
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Mail</label>
-                            <input type="text" placeholder="Enter email" class="contact__form-input">
+                            <input type="text" placeholder="Enter your email" class="contact__form-input">
                         </div>
 
                         <div class="contact__form-div contact__form-area">
                             <label for="" class="contact__form-tag">Message</label>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your Message"
-                                class="contact__form-input "></textarea>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your message" class="contact__form-input "></textarea>
                         </div>
 
 
@@ -688,24 +784,24 @@
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
+                    <a href="https://twitter.com/shiyapathania" target="_blank" class="footer__social-link">
                         <i class='bx bxl-twitter footer__social-icon'></i>
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
+                    <a href="https://linkedin.com/in/shiya-pathania" target="_blank" class="footer__social-link">
                         <i class='bx bxl-linkedin footer__social-icon'></i>
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="#" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-instagram footer__social-icon'></i>
+                    <a href="https://github.com/shiyapathania" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github footer__social-icon'></i>
                     </a>
                 </li>
             </ul>
 
             <span class="footer__copy">
-                &#169; 2025 Shiya. All rights reserved.
+                &#169; 2025 Shiya Pathania. All rights reserved.
             </span>
         </div>
     </footer>
