@@ -1217,3 +1217,11 @@ body.light-theme {
     border-radius: 0.5rem;
   }
 }
+
+
+
+.nav__logo-img {
+  height: 40px; /* apne hisab se adjust karo */
+  width: auto;
+  display: block;
+}
