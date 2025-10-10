@@ -63,6 +63,7 @@
 
     <style>
       /* Global Styles */
+
       :root {
         --primary-color: #6c63ff;
         --secondary-color: #4a44c9;
@@ -79,8 +80,8 @@
         --gradient-3: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);
         --gradient-4: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
       }
-
       /* Dark Mode Variables */
+
       [data-theme="dark"] {
         --text-color: #f0f0f0;
         --light-text: #b0b0b0;
@@ -263,8 +264,8 @@
         transform: translateY(-15px) scale(1.02);
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
       }
-
       /* Floating Elements */
+
       .floating-elements {
         position: absolute;
         width: 100%;
@@ -293,41 +294,36 @@
           transform: translateY(0) rotate(360deg);
         }
       }
+      /* IMPROVED Header Styles */
 
-      /* Header Styles */
       header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.95);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
         backdrop-filter: blur(10px);
+ 
       }
 
       [data-theme="dark"] header {
-        background: rgba(30, 30, 30, 0.9);
+        background: rgba(30, 30, 30, 0.95);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
       }
 
       .header-scrolled {
-        background: rgba(255, 255, 255, 0.95);
         padding: 10px 0;
-      }
-
-      [data-theme="dark"] .header-scrolled {
-        background: rgba(30, 30, 30, 0.95);
       }
 
       .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+        padding: 15px 0;
       }
-
       .logo {
         font-size: 2rem;
         font-weight: 700;
@@ -337,6 +333,15 @@
         color: transparent;
         text-decoration: none;
         transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+      }
+
+      .logo img {
+        height: 100px;
+        width: auto;
+        object-fit: contain;
       }
 
       .logo:hover {
@@ -347,10 +352,12 @@
         display: flex;
         list-style: none;
         align-items: center;
+        margin: 0;
+        padding: 0;
       }
 
       .nav-links li {
-        margin-left: 30px;
+        margin: 0 12px;
       }
 
       .nav-links a {
@@ -360,6 +367,7 @@
         transition: var(--transition);
         position: relative;
         padding: 5px 0;
+        font-size: 0.95rem;
       }
 
       .nav-links a:hover {
@@ -388,8 +396,8 @@
         font-size: 1.5rem;
         color: var(--primary-color);
       }
-
       /* Theme Toggle Button */
+
       .theme-toggle {
         background: transparent;
         border: none;
@@ -397,7 +405,7 @@
         font-size: 1.5rem;
         color: var(--text-color);
         transition: var(--transition);
-        margin-left: 20px;
+        margin-left: 15px;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -423,20 +431,23 @@
       [data-theme="dark"] .theme-toggle .fa-sun {
         display: block;
       }
-
       /* Hero Section */
+
       .hero {
         height: 100vh;
         display: flex;
         align-items: center;
         position: relative;
         overflow: hidden;
+       
+
       }
 
       .hero-content {
         max-width: 600px;
         z-index: 1;
         animation: fadeInUp 1s ease-out;
+        margin-top: 80px;
       }
 
       @keyframes fadeInUp {
@@ -504,8 +515,8 @@
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
         border: 5px solid var(--card-bg);
       }
-
       /* About Section */
+
       .about-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -587,15 +598,14 @@
 
       .about-image img {
         width: 100%;
-        max-width: 600px;      
-        max-height: 500px;       
+        max-width: 600px;
+        max-height: 500px;
         border-radius: 20px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         border: 5px solid var(--card-bg);
         animation: pulse 4s infinite;
-        object-fit: cover;       
+        object-fit: cover;
       }
-
 
       @keyframes pulse {
         0%,
@@ -606,8 +616,8 @@
           transform: scale(1.02);
         }
       }
-
       /* Skills Section */
+
       .skills-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -658,8 +668,8 @@
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
       }
-
       /* Experience Section */
+
       .timeline {
         position: relative;
         max-width: 800px;
@@ -767,8 +777,8 @@
         left: -15px;
         color: var(--primary-color);
       }
-
       /* Testing Section */
+
       .testing-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -840,8 +850,8 @@
         border-radius: 20px;
         font-size: 0.8rem;
       }
-
       /* Education Section */
+
       .education-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -894,8 +904,8 @@
         font-weight: 600;
         font-size: 1.1rem;
       }
-
       /* Contact Section */
+
       .contact-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1004,8 +1014,8 @@
         min-height: 150px;
         resize: vertical;
       }
-
       /* Footer */
+
       footer {
         background: var(--dark-bg);
         color: white;
@@ -1102,8 +1112,8 @@
         color: #bbb;
         font-size: 0.9rem;
       }
-
       /* Modal Styles */
+
       .modal {
         display: none;
         position: fixed;
@@ -1197,13 +1207,315 @@
         line-height: 1.6;
         font-size: 1.1rem;
       }
+      /* NEW SECTIONS STYLES */
+      /* Projects Section */
 
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .project-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        height: 100%;
+      }
+
+      .project-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-image {
+        height: 250px;
+        overflow: hidden;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .project-card:hover .project-image img {
+        transform: scale(1.1);
+      }
+
+      .project-content {
+        padding: 25px;
+        background: var(--card-bg);
+      }
+
+      .project-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .project-content p {
+        color: var(--light-text);
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .project-tag {
+        background: rgba(108, 99, 255, 0.1);
+        color: var(--primary-color);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .project-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .project-link:hover {
+        color: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+      /* Testimonials Section */
+
+      .testimonials-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .testimonial-card {
+        position: relative;
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .testimonial-content {
+        position: relative;
+        margin-bottom: 25px;
+      }
+
+      .testimonial-content p {
+        font-style: italic;
+        color: var(--light-text);
+        line-height: 1.8;
+        position: relative;
+        z-index: 1;
+      }
+
+      .testimonial-content::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        font-size: 5rem;
+        color: rgba(108, 99, 255, 0.1);
+        z-index: 0;
+        font-family: Georgia, serif;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .author-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--primary-color);
+      }
+
+      .author-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .author-info h4 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+      }
+
+      .author-info p {
+        color: var(--light-text);
+        font-size: 0.9rem;
+      }
+      /* Blog Section */
+
+      .blog-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .blog-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        height: 100%;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .blog-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .blog-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .blog-card:hover .blog-image img {
+        transform: scale(1.1);
+      }
+
+      .blog-content {
+        padding: 25px;
+        background: var(--card-bg);
+      }
+
+      .blog-meta {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+        color: var(--light-text);
+      }
+
+      .blog-meta span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .blog-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .blog-content p {
+        color: var(--light-text);
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+      }
+
+      .blog-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .blog-link:hover {
+        color: var(--secondary-color);
+        transform: translateX(5px);
+      }
+      /* Achievements Section */
+
+      .achievements-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .achievement-card {
+        text-align: center;
+        padding: 40px 25px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .achievement-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        background: var(--gradient-1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        transition: var(--transition);
+      }
+
+      .achievement-card:hover .achievement-icon {
+        transform: scale(1.1) rotate(10deg);
+      }
+
+      .achievement-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .achievement-card p {
+        color: var(--light-text);
+        font-size: 0.95rem;
+      }
+      /* Resume Section */
+
+      .resume-container {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .resume-download {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        font-size: 1.1rem;
+      }
+
+      .resume-download:hover i {
+        animation: bounce 0.5s ease infinite alternate;
+      }
       /* Responsive Styles */
+
       @media (max-width: 1200px) {
         .hero h1 {
           font-size: 3.5rem;
         }
-
         .hero h2 {
           font-size: 2rem;
         }
@@ -1213,23 +1525,18 @@
         .hero h1 {
           font-size: 3rem;
         }
-
         .hero h2 {
           font-size: 1.8rem;
         }
-
         .about-content {
           grid-template-columns: 1fr;
         }
-
         .hero-image {
           display: none;
         }
-
         .contact-container {
           grid-template-columns: 1fr;
         }
-
         .section-title h2 {
           font-size: 2.5rem;
         }
@@ -1239,7 +1546,6 @@
         .navbar {
           padding: 15px 0;
         }
-
         .nav-links {
           position: fixed;
           top: 70px;
@@ -1255,58 +1561,52 @@
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
           z-index: 999;
         }
-
         .nav-links.active {
           left: 0;
         }
-
         .nav-links li {
           margin: 15px 0;
         }
-
         .hamburger {
           display: block;
           z-index: 1000;
         }
-
         .hero h1 {
           font-size: 2.5rem;
         }
-
         .section-title h2 {
           font-size: 2rem;
         }
-
         .timeline::after {
           left: 31px;
         }
-
         .timeline-item {
           width: 100%;
           padding-left: 70px;
           padding-right: 25px;
         }
-
         .timeline-item:nth-child(even) {
           left: 0;
         }
-
         .timeline-content::after {
           left: -10px;
         }
-
         .about-stats {
           grid-template-columns: 1fr;
         }
-
         .hero-btns {
           flex-direction: column;
           gap: 15px;
         }
-
         .btn {
           width: 100%;
           text-align: center;
+        }
+        .projects-container,
+        .testimonials-container,
+        .blog-container,
+        .achievements-container {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -1314,19 +1614,15 @@
         .hero h1 {
           font-size: 2.2rem;
         }
-
         .hero h2 {
           font-size: 1.5rem;
         }
-
         .skills-container {
           grid-template-columns: 1fr;
         }
-
         .modal-content {
           padding: 30px 20px;
         }
-
         .section-title h2 {
           font-size: 1.8rem;
         }
@@ -1369,6 +1665,7 @@
       }
     </style>
   </head>
+
   <body>
     <!-- Floating Elements -->
     <div class="floating-elements">
@@ -1398,18 +1695,27 @@
       ></div>
     </div>
 
-    <!-- Header -->
+    <!-- IMPROVED Header -->
     <header id="header">
       <div class="container">
         <nav class="navbar">
-          <a href="#" class="logo">Shiya Pathania</a>
+          <a href="#" class="logo">
+            <img src="/assets/img/logo2.png" alt="Logo" />
+            
+          </a>
+
           <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#testing">Testing</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#achievements">Achievements</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
               <button class="theme-toggle" id="themeToggle">
@@ -1427,80 +1733,90 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Shiya Pathania</h1>
-      <h2>HR cum Operation Executive & Web UI Tester</h2>
-      <p>
-        Welcome! I’m Shiya Pathania — bridging people, processes, and digital experiences with precision and creativity. Explore my journey in HR Operations, Web UI Testing, and content support.
-      </p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn">Get In Touch</a>
-        <a href="#about" class="btn btn-outline">Learn More</a>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Shiya Pathania</h1>
+          <h2>HR cum Operation Executive & Web UI Tester</h2>
+          <p>
+            Welcome! I'm Shiya Pathania — bridging people, processes, and
+            digital experiences with precision and creativity. Explore my
+            journey in HR Operations, Web UI Testing, and content support.
+          </p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn">Get In Touch</a>
+            <a href="#about" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./assets/img/shiyaimage.jpg" alt="Shiya Pathania" />
+        </div>
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="./assets/img/shiyaimage.jpg" alt="Shiya Pathania" />
-    </div>
-  </div>
     </section>
-
 
     <!-- About Section -->
     <section id="about">
-  <div class="container">
-    <div class="section-title">
-      <h2>About Me</h2>
-      <p>Discover my professional journey, skills, and contributions.</p>
-    </div>
-    <div class="about-content">
-      <div class="about-text">
-        <h3>HR & Operations Executive | Manual Web UI Tester | Content Writer</h3>
-        <p>
-          I am a multi-skilled professional with experience in HR operations,
-          training coordination, and project support under the DDU-GKY project
-          at <strong>Menrol Skills Pvt. Ltd.</strong> Certified as an <strong>e-SOP Master Trainer</strong>, 
-          I effectively train teams, implement SOPs, and maintain compliance 
-          with <strong>SRLM and MoRD guidelines</strong>.
-        </p>
-        <p>
-          In addition to HR, I have hands-on experience in <strong>manual web UI testing</strong>
-          and content creation, ensuring quality, usability, and clarity across 
-          projects and official communications.
-        </p>
-        <p>
-          This unique blend of <strong>HR expertise, training skills, testing precision, and content support</strong>
-          enables me to bridge people, processes, and digital experiences seamlessly.
-        </p>
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>Discover my professional journey, skills, and contributions.</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>
+              HR & Operations Executive | Manual Web UI Tester | Content Writer
+            </h3>
+            <p>
+              I am a multi-skilled professional with experience in HR
+              operations, training coordination, and project support under the
+              DDU-GKY project at
+              <strong>Menrol Skills Pvt. Ltd.</strong> Certified as an
+              <strong>e-SOP Master Trainer</strong>, I effectively train teams,
+              implement SOPs, and maintain compliance with
+              <strong>SRLM and MoRD guidelines</strong>.
+            </p>
+            <p>
+              In addition to HR, I have hands-on experience in
+              <strong>manual web UI testing</strong> and content creation,
+              ensuring quality, usability, and clarity across projects and
+              official communications.
+            </p>
+            <p>
+              This unique blend of
+              <strong
+                >HR expertise, training skills, testing precision, and content
+                support</strong
+              >
+              enables me to bridge people, processes, and digital experiences
+              seamlessly.
+            </p>
 
-        <div class="about-stats">
-          <div class="stat">
-            <i class="fas fa-briefcase"></i>
-            <h4>8+</h4>
-            <p>Months Experience</p>
+            <div class="about-stats">
+              <div class="stat">
+                <i class="fas fa-briefcase"></i>
+                <h4>8+</h4>
+                <p>Months Experience</p>
+              </div>
+              <div class="stat">
+                <i class="fas fa-project-diagram"></i>
+                <h4>5+</h4>
+                <p>Projects Completed</p>
+              </div>
+              <div class="stat">
+                <i class="fas fa-award"></i>
+                <h4>4</h4>
+                <p>Certifications</p>
+              </div>
+            </div>
           </div>
-          <div class="stat">
-            <i class="fas fa-project-diagram"></i>
-            <h4>5+</h4>
-            <p>Projects Completed</p>
-          </div>
-          <div class="stat">
-            <i class="fas fa-award"></i>
-            <h4>4</h4>
-            <p>Certifications</p>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="About Shiya"
+            />
           </div>
         </div>
       </div>
-      <div class="about-image">
-        <img
-          src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-          alt="About Shiya"
-        />
-      </div>
-    </div>
-  </div>
     </section>
-
 
     <!-- Skills Section -->
     <section id="skills">
@@ -1653,26 +1969,6 @@
           <p>My manual web UI testing projects and expertise</p>
         </div>
         <div class="testing-container">
-          <!-- <div class="testing-card">
-            <img
-              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-              alt="Hoping Minds Website Testing"
-            />
-            <div class="testing-card-content">
-              <h3>Hoping Minds Website</h3>
-              <p>
-                Comprehensive manual UI testing for an educational platform,
-                focusing on user experience and functionality across different
-                browsers and devices.
-              </p>
-              <div class="testing-tools">
-                <span class="testing-tool">UI Testing</span>
-                <span class="testing-tool">Cross-browser</span>
-                <span class="testing-tool">Usability</span>
-              </div>
-            </div>
-          </div> -->
-
           <div class="testing-card">
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
@@ -1692,26 +1988,6 @@
               </div>
             </div>
           </div>
-
-          <!-- <div class="testing-card">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-              alt="Menrol Skills Project Testing"
-            />
-            <div class="testing-card-content">
-              <h3>Menrol Skills Project</h3>
-              <p>
-                Manual testing of an internal HR management system, focusing on
-                workflow efficiency and user interface optimization for
-                administrative tasks.
-              </p>
-              <div class="testing-tools">
-                <span class="testing-tool">Workflow Testing</span>
-                <span class="testing-tool">UI Optimization</span>
-                <span class="testing-tool">Regression Testing</span>
-              </div>
-            </div>
-          </div> -->
         </div>
 
         <div style="margin-top: 50px; text-align: center">
@@ -1775,6 +2051,319 @@
       </div>
     </section>
 
+    <!-- NEW: Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>Showcasing my key projects and contributions</p>
+        </div>
+        <div class="projects-container">
+          <div class="card project-card">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                alt="DDU-GKY Project"
+              />
+            </div>
+            <div class="project-content">
+              <h3>DDU-GKY Project Management</h3>
+              <p>
+                Managed end-to-end operations for skill development project
+                under DDU-GKY scheme, ensuring compliance with SRLM and MoRD
+                guidelines.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HR Operations</span>
+                <span class="project-tag">Project Management</span>
+                <span class="project-tag">Compliance</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>View Details</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card project-card">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                alt="Training Program"
+              />
+            </div>
+            <div class="project-content">
+              <h3>e-SOP Training Program</h3>
+              <p>
+                Developed and delivered comprehensive e-SOP training sessions
+                for teams, improving operational efficiency and compliance.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Training</span>
+                <span class="project-tag">SOP Implementation</span>
+                <span class="project-tag">Process Improvement</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>View Details</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card project-card">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                alt="UI Testing Project"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Website UI Testing</h3>
+              <p>
+                Conducted comprehensive manual UI testing for multiple websites,
+                identifying and reporting critical usability issues.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">UI Testing</span>
+                <span class="project-tag">Quality Assurance</span>
+                <span class="project-tag">Bug Reporting</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>View Details</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Testimonials Section -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What colleagues and supervisors say about my work</p>
+        </div>
+        <div class="testimonials-container">
+          <div class="card testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Shiya demonstrated exceptional skills in HR operations and
+                project coordination. Her attention to detail and ability to
+                manage multiple tasks simultaneously made her an invaluable
+                asset to our team."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img
+                  src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg"
+                  alt="Bikesh Pandey"
+                />
+              </div>
+              <div class="author-info">
+                <h4>Bikesh Pandey</h4>
+                <p>State Head, Menrol Skills Pvt. Ltd.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Her testing skills brought significant improvements to our web
+                platforms. Shiya's meticulous approach to UI testing helped us
+                identify critical issues before deployment."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/180/180644.png"
+                  alt="Project Manager"
+                />
+              </div>
+              <div class="author-info">
+                <h4>Project Manager</h4>
+                <p>Slanster Platform</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Shiya's training sessions were comprehensive and engaging. She
+                effectively communicated complex SOPs and ensured team members
+                understood and implemented them correctly."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img
+                  src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small_2x/Basic_Ui__28186_29.jpg"
+                  alt="Team Member"
+                />
+              </div>
+              <div class="author-info">
+                <h4>Team Member</h4>
+                <p>Menrol Skills Pvt. Ltd.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Blog Section -->
+    <section id="blog">
+      <div class="container">
+        <div class="section-title">
+          <h2>Blog & Articles</h2>
+          <p>Sharing insights and knowledge from my experience</p>
+        </div>
+        <div class="blog-container">
+          <div class="card blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                alt="HR Operations"
+              />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> Oct 15, 2025</span>
+                <span><i class="far fa-clock"></i> 5 min read</span>
+              </div>
+              <h3>
+                Best Practices in HR Operations for Skill Development Projects
+              </h3>
+              <p>
+                Exploring effective strategies for managing HR operations in
+                government skill development initiatives like DDU-GKY.
+              </p>
+              <a href="#" class="blog-link">
+                <span>Read More</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="card blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                alt="UI Testing"
+              />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> Sep 28, 2025</span>
+                <span><i class="far fa-clock"></i> 7 min read</span>
+              </div>
+              <h3>Manual UI Testing: A Comprehensive Guide for Beginners</h3>
+              <p>
+                A step-by-step guide to effective manual UI testing, covering
+                methodologies, tools, and best practices.
+              </p>
+              <a href="#" class="blog-link">
+                <span>Read More</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="card blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                alt="Training"
+              />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> Aug 12, 2025</span>
+                <span><i class="far fa-clock"></i> 6 min read</span>
+              </div>
+              <h3>
+                Effective SOP Training: Engaging Teams for Better Compliance
+              </h3>
+              <p>
+                Strategies for creating engaging and effective SOP training
+                sessions that ensure team compliance and understanding.
+              </p>
+              <a href="#" class="blog-link">
+                <span>Read More</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Achievements Section -->
+    <section id="achievements">
+      <div class="container">
+        <div class="section-title">
+          <h2>Achievements</h2>
+          <p>Recognitions and milestones in my professional journey</p>
+        </div>
+        <div class="achievements-container">
+          <div class="card achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>e-SOP Master Trainer</h3>
+            <p>
+              Certified as Master Trainer for implementing electronic Standard
+              Operating Procedures
+            </p>
+          </div>
+
+          <div class="card achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3>Project Excellence</h3>
+            <p>
+              Recognized for outstanding contribution to DDU-GKY project
+              implementation and management
+            </p>
+          </div>
+
+          <div class="card achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Quality Testing</h3>
+            <p>
+              Acknowledged for identifying critical UI issues that improved
+              platform user experience
+            </p>
+          </div>
+
+          <div class="card achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Training Excellence</h3>
+            <p>
+              Received positive feedback for effective training delivery and
+              team skill development
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Education Section -->
     <section id="education">
       <div class="container">
@@ -1810,6 +2399,46 @@
         </div>
       </div>
     </section>
+
+    <!-- NEW: Resume Section -->
+<section id="certificate">
+  <div class="container">
+    <div class="section-title">
+      <h2>Certificates</h2>
+      <p>Download my certificates to explore my achievements and qualifications</p>
+    </div>
+    <div class="resume-container">
+      <div class="card" style="text-align: center; padding: 50px">
+        <i
+          class="fas fa-certificate"
+          style="
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+          "
+        ></i>
+        <h3 style="margin-bottom: 15px">Download My Certificates</h3>
+        <p
+          style="
+            color: var(--light-text);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          Access all my verified certifications showcasing my skills, technical expertise, 
+          and professional accomplishments in various domains.
+        </p>
+        <a href="#" class="btn resume-download">
+          <i class="fas fa-download"></i>
+          <span>Download Certificates (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact">
@@ -1935,7 +2564,12 @@
               <li><a href="#skills">Skills</a></li>
               <li><a href="#experience">Experience</a></li>
               <li><a href="#testing">Testing</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#achievements">Achievements</a></li>
               <li><a href="#education">Education</a></li>
+              <li><a href="#resume">Resume</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
